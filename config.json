@@ -1,0 +1,103 @@
+{
+  "version": "1.0.0",
+  "assistant": {
+    "name": "MAX",
+    "full_name": "Modular Autonomous eXecutive",
+    "wake_word": "hey max",
+    "wake_word_enabled": false,
+    "voice_input_enabled": false,
+    "voice_output_enabled": false,
+    "language": "en-US"
+  },
+  "providers": {
+    "default": "",
+    "fallback_order": [
+      "openai",
+      "anthropic",
+      "gemini",
+      "groq",
+      "deepseek",
+      "mistral",
+      "openrouter",
+      "ollama"
+    ],
+    "openai": {
+      "enabled": false,
+      "api_key": "",
+      "model": "gpt-4o"
+    },
+    "anthropic": {
+      "enabled": false,
+      "api_key": "",
+      "model": "claude-opus-4-5"
+    },
+    "gemini": {
+      "enabled": false,
+      "api_key": "",
+      "model": "gemini-1.5-pro"
+    },
+    "groq": {
+      "enabled": false,
+      "api_key": "",
+      "model": "llama3-70b-8192"
+    },
+    "deepseek": {
+      "enabled": false,
+      "api_key": "",
+      "model": "deepseek-chat"
+    },
+    "mistral": {
+      "enabled": false,
+      "api_key": "",
+      "model": "mistral-large-latest"
+    },
+    "openrouter": {
+      "enabled": false,
+      "api_key": "",
+      "model": "openai/gpt-4o"
+    },
+    "ollama": {
+      "enabled": false,
+      "base_url": "http://localhost:11434",
+      "model": "llama3",
+      "cloud_url": "",
+      "api_key": "",
+      "use_cloud": false
+    }
+  },
+  "permissions": {
+    "web_browsing": true,
+    "file_read": true,
+    "file_write": false,
+    "screen_capture": false,
+    "pc_control": false,
+    "microphone": false,
+    "camera": false,
+    "notifications": false,
+    "automation": false,
+    "memory": true
+  },
+  "memory": {
+    "enabled": true,
+    "max_history": 50
+  },
+  "ui": {
+    "theme": "dark",
+    "accent": "#00BFFF",
+    "animation_speed": 1.0
+  },
+  "tasks": {
+    "max_concurrent": 5,
+    "default_timeout": 60,
+    "max_retries": 3
+  },
+  "logging": {
+    "level": "INFO"
+  },
+  "persist_test": {
+    "x": null
+  },
+  "persist_check": {
+    "value": null
+  }
+}

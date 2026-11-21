@@ -1,0 +1,42 @@
+"""
+MAX AI — Example Plugin Template
+LEREON Technologies
+
+Copy this file to a new .py file in plugins/installed/ to create your plugin.
+"""
+
+from plugins.plugin_manager import BasePlugin, PluginMeta
+
+
+class ExamplePlugin(BasePlugin):
+    """
+    Example MAX AI plugin.
+    Replace this with your implementation.
+    """
+
+    @property
+    def meta(self) -> PluginMeta:
+        return PluginMeta(
+            id="example_plugin",
+            name="Example Plugin",
+            version="1.0.0",
+            description="A template for creating MAX AI plugins.",
+            author="Your Name",
+            permissions_required=[],  # List required permissions
+        )
+
+    def on_load(self, core) -> bool:
+        """Called when plugin activates. core is the MAXCore instance."""
+        print("Example plugin loaded!")
+        return True
+
+    def on_unload(self):
+        print("Example plugin unloaded.")
+
+    def on_chat_message(self, user_msg: str, response: str):
+        """Optional: post-process chat responses. Return None to leave unchanged."""
+        return None  # Return modified response or None
+
+
+# REQUIRED: The plugin manager looks for a class named Plugin in each file.
+Plugin = ExamplePlugin
